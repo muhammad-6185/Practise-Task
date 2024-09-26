@@ -6,8 +6,8 @@ public class Main {
         int limit = 10;
 
         for (int i = 0; i <= limit ; i++) {
-            Student student = new Student();
-            student.start();
+            TaskThread taskThread = new TaskThread();
+            taskThread.start();
         }
     }
 }

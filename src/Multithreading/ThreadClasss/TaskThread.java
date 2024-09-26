@@ -1,6 +1,6 @@
 package Multithreading.ThreadClasss;
 
-public class Student extends Thread {
+public class TaskThread extends Thread {
 
     @Override
     public void run() {

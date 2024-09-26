@@ -5,7 +5,7 @@ public class Main {
         int limit = 10;
 
         for (int i = 0; i <= limit ; i++) {
-            Thread thread = new Thread(new Student());
+            java.lang.Thread thread = new java.lang.Thread(new TaskThread());
             thread.start();
         }
     }
