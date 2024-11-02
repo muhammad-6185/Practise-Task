@@ -1,15 +1,15 @@
 package Recursion;
 
 public class RecursionClass {
-    public void printValue(Long number) {
+    public void printValue(Long number, Long limit) {
 
-        if (number == 0) {
+        if (number > limit) {
             return;
         }
 
         System.out.println("I am " + number +" number.");
 
-        number--;
-        printValue(number);
+        number++;
+        printValue(number, limit);
     }
 }
