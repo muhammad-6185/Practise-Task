@@ -1,6 +1,7 @@
 package ProblemSolving;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProblemSolving {
@@ -15,10 +16,10 @@ public class ProblemSolving {
      * Explanation: The sum of elements from 2nd to 4th position is 12.
      */
 
-    public List<Integer> subArraySum(int[] arr, int k) {
+    public ArrayList<Integer> subArraySum(int[] arr, int k) {
         int sum = 0;
         int pointer = 0;
-        List<Integer> result = new ArrayList<>();
+        ArrayList<Integer> result = new ArrayList<>();
 
         getIndexes(arr, k, result, sum, pointer);
 
@@ -39,9 +40,10 @@ public class ProblemSolving {
      * Explanation: All the numbers from 1 to 5 are present except 4.
      */
     public int findMissingNumber(int[] nums) {
+
         sortArray(nums);
 
-        int num = nums[0];
+        int num = 1;
 
         for (int i = 0; i < nums.length; i++) {
             if (num != nums[i]) {
