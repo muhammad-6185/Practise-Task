@@ -1,7 +1,6 @@
 package ProblemSolving;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ProblemSolving {
@@ -39,26 +38,19 @@ public class ProblemSolving {
      * Output: 4
      * Explanation: All the numbers from 1 to 5 are present except 4.
      */
-    public List<Integer> findMissingNumber(int[] nums) {
+    public int findMissingNumber(int[] nums) {
         sortArray(nums);
-
-        List<Integer> result = new ArrayList<>();
 
         int num = nums[0];
 
         for (int i = 0; i < nums.length; i++) {
             if (num != nums[i]) {
-                result.add(num);
-                i-=1;
+                return num;
             }
             num+=1;
         }
 
-        if (result.isEmpty()) {
-            result.add(-1);
-        }
-
-        return result;
+        return num;
     }
 
     private void sortArray(int[] list) {

@@ -9,9 +9,9 @@ public class Main {
         int target = 15;
 
         ProblemSolving problemSolving = new ProblemSolving();
-        System.out.println(problemSolving.subArraySum(arr, target));
+//        System.out.println(problemSolving.subArraySum(arr, target));
 
-        int[] arr1 = new int[] {1, 2, 3, 5, 8};
+        int[] arr1 = new int[] {1,2,3,4,5};
         System.out.println(problemSolving.findMissingNumber(arr1));
     }
 }
