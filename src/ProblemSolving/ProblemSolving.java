@@ -1,6 +1,7 @@
 package ProblemSolving;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProblemSolving {
@@ -27,6 +28,49 @@ public class ProblemSolving {
         }
 
         return result;
+    }
+
+    /**
+     * You are given an array arr of size n - 1 that contains distinct integers in the range from 1 to n (inclusive).
+     * This array represents a permutation of the integers from 1 to n with one element missing.
+     * Your task is to identify and return the missing element.
+     * Examples:
+     * Input: arr[] = [1, 2, 3, 5]
+     * Output: 4
+     * Explanation: All the numbers from 1 to 5 are present except 4.
+     */
+    public List<Integer> findMissingNumber(int[] nums) {
+        sortArray(nums);
+
+        List<Integer> result = new ArrayList<>();
+
+        int num = nums[0];
+
+        for (int i = 0; i < nums.length; i++) {
+            if (num != nums[i]) {
+                result.add(num);
+                i-=1;
+            }
+            num+=1;
+        }
+
+        if (result.isEmpty()) {
+            result.add(-1);
+        }
+
+        return result;
+    }
+
+    private void sortArray(int[] list) {
+        for (int i = 0; i < list.length; i++) {
+            for (int j = i + 1; j < list.length; j++) {
+                if (list[i] > list[j]) {
+                    int temp = list[i];
+                    list[i] = list[j];
+                    list[j] = temp;
+                }
+            }
+        }
     }
 
     private void getIndexes(int[] arr, int k, List<Integer> result, int sum, int pointer) {

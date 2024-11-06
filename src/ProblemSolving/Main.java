@@ -10,5 +10,8 @@ public class Main {
 
         ProblemSolving problemSolving = new ProblemSolving();
         System.out.println(problemSolving.subArraySum(arr, target));
+
+        int[] arr1 = new int[] {1, 2, 3, 5, 8};
+        System.out.println(problemSolving.findMissingNumber(arr1));
     }
 }
