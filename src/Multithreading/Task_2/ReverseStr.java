@@ -3,6 +3,10 @@ package Multithreading.Task_2;
 public class ReverseStr {
 
     public String reverseStr(String inputStr, String generatedStr, int pointer) {
+        if (inputStr == null || inputStr.isEmpty()) {
+            return inputStr;
+        }
+
         if (pointer == 0) {
            return generatedStr + inputStr.charAt(pointer);
         }
