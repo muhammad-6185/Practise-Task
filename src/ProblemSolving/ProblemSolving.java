@@ -1,7 +1,6 @@
 package ProblemSolving;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ProblemSolving {
 
@@ -54,6 +53,51 @@ public class ProblemSolving {
         return num;
     }
 
+    /**
+     * Given an integer array arr[]. You need to find and return the maximum sum possible from all the subarrays.
+     * Examples:
+     * Input: arr[] = [1, 2, 3, -2, 5]
+     * Output: 9
+     * Explanation: Max subarray sum is 9 of elements (1, 2, 3, -2, 5).
+     * Input: arr[] = [-1, -2, -3, -4]
+     * Output: -1
+     * Explanation: Max subarray sum is -1 of element (-1).
+     * Input: arr[] = [5, 4, 7]
+     * Output: 16
+     * Explanation: Max subarray sum is 16 of elements (5, 4, 7)
+     */
+    public int maxSubarraySum(int[] arr) {
+//        List<Integer> list = new ArrayList<>();
+//
+//        int sum = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] > 0){
+//                sum += arr[i];
+//            }
+//
+//            if ((arr[i] < 0) && (sum != 0)) {
+//                list.add(sum);
+//                sum = 0;
+//            }
+//        }
+//
+//        if (list.isEmpty()) {
+//            return -1;
+//        }
+//        list.sort(Collections.reverseOrder());
+//
+//        return list.get(0);
+
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+        return sum;
+    }
+
     private void sortArray(int[] list) {
         for (int i = 0; i < list.length; i++) {
             for (int j = i + 1; j < list.length; j++) {
@@ -88,4 +132,15 @@ public class ProblemSolving {
         }
     }
 
+    public void print(String val) {
+        System.out.println(val);
+    }
+
+    public void printStudents(List<Student> students) {
+        students.forEach(this::print);
+    }
+
+    private void print(Student student) {
+        System.out.println(student);
+    }
 }
