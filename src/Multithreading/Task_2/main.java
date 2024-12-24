@@ -14,7 +14,16 @@ public class main {
         String string = reader.readLine();
 
         ReverseStr reverseStr = new ReverseStr();
-        System.out.println(reverseStr.reverseStr(string, "", string.length()-1));
+
+        /**
+         * Reverse String
+         */
+        System.out.println(reverseStr.reverseStr(string, "", string.length() - 1));
+
+        /**
+         * Check Palindrome
+         */
+        System.out.printf("Is Palindrome: %s %n", reverseStr.validatePalindrome(string));
     }
 
 }

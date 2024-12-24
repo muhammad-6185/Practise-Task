@@ -17,4 +17,18 @@ public class ReverseStr {
         return reverseStr(inputStr, generatedStr, pointer);
     }
 
+    public boolean validatePalindrome(String value) {
+        if (value == null || value.isEmpty()) {
+            return false;
+        }
+
+        value = value.toLowerCase();
+
+        if (value.equals(reverseStr(value, "", value.length() - 1))) {
+            return true;
+        }
+
+        return false;
+    }
+
 }
