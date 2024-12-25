@@ -13,17 +13,25 @@ public class main {
         System.out.println("Please provide String to e reversed:");
         String string = reader.readLine();
 
-        ReverseStr reverseStr = new ReverseStr();
+        ProblemSolutions problemSolutions = new ProblemSolutions();
 
         /**
          * Reverse String
          */
-        System.out.println(reverseStr.reverseStr(string, "", string.length() - 1));
+        System.out.println(problemSolutions.reverseStr(string, "", string.length() - 1));
 
         /**
          * Check Palindrome
          */
-        System.out.printf("Is Palindrome: %s %n", reverseStr.validatePalindrome(string));
+        System.out.printf("Is Palindrome: %s %n", problemSolutions.validatePalindrome(string));
+
+        System.out.println("Factorial of 5 is: ");
+        System.out.println(problemSolutions.findFactorial(5));
+
+
+        int[] array = {1,8,9,10,12,20,13,14,15,22,2,3,4,11,5,6,7,16,17,18,19};
+        System.out.print("Missing Number: ");
+        System.out.println(problemSolutions.getMissingNumber(array));
     }
 
 }
